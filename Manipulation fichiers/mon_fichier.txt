@@ -1,0 +1,3 @@
+Ligne 1 : Début du fichier memo C.
+Ligne 2 : Les pointeurs et les fichiers sont maitrises.
+Ligne 3 : Fin du test d'ecriture.

@@ -1,0 +1,7 @@
+Pour compiler un projet multifichier en ligne de commande avec GCC, 
+il faut fournir tous les fichiers .c au compilateur : 
+
+gcc -Wall -Wextra main.c math_utils.c -o mon_programme
+
+On ne met jamais les fichiers .h dans la commande de compilation gcc, 
+seuls les fichiers .c sont traduits en langage machine.
