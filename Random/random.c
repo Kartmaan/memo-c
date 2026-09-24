@@ -2,9 +2,28 @@
 #include <stdlib.h> // Contient rand(), srand() et RAND_MAX
 #include <time.h>   // Contient time() pour initialiser la graine
 
+/*  
+ ============================================================================
+                            ALEATOIRE EN C
+ ============================================================================
+Le langage C fournit des fonctions pour générer des nombres pseudo-aléatoires.
+Les langage de programmation ne peuvent pas générer de vrais nombres aléatoires, 
+mais ils utilisent des algorithmes pour produire des séquences de nombres qui 
+semblent aléatoires.
+
+- rand() : génère un entier pseudo-aléatoire entre 0 et RAND_MAX (au moins 32767).
+- srand(unsigned int seed) : initialise la graine pour rand(). Si on ne l'appelle 
+pas, rand() produira la même séquence à chaque exécution.
+- time(NULL) : renvoie le nombre de secondes écoulées depuis le 1er janvier 1970. 
+On l'utilise souvent pour initialiser la graine avec srand() afin d'obtenir des 
+séquences différentes à chaque appel du programme (au moins tous les secondes).
+*/
+
 // Fonction utilitaire pour générer un entier dans un intervalle [min, max]
 int generer_entier(int min, int max) {
     // Formule classique : min + rand() % (max - min + 1)
+    // rand() ne renvoie qu'un entier positif pseudo-aléatoire, donc on ajuste 
+    // l'intervalle avec le modulo.
     return min + rand() % (max - min + 1);
 }
 

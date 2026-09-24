@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/*  
+ ============================================================================
+                            CONDITIONS EN C
+ ============================================================================
+C permet de contrôler le flux d'exécution d'un programme grâce à des conditions.
+Les conditions sont des expressions logiques qui évaluent à vrai (true) ou faux (false).
+En C, les conditions sont souvent utilisées avec les instructions if, else if, else et switch
+*/
+
 int main(void) {
     int age = 20;
     bool a_permis = true;

@@ -16,7 +16,8 @@ Elle peut également ne rien renvoyer (void) et ne pas prendre de paramètres.
 // 1. PROTOTYPES DES FONCTIONS (Déclarations)
 // ----------------------------------------------------
 // Indiquent au compilateur l'existence de la fonction
-// avant son utilisation dans main().
+// avant son utilisation dans main(). Cela permet d'appeler les fonctions dans 
+// n'importe quel ordre.
 
 void afficher_bonjour(void);
 int additionner(int a, int b);

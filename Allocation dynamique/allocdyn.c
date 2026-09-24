@@ -1,35 +1,19 @@
-/*
+/*  
  ============================================================================
-                      L'ALLOCATION DYNAMIQUE EN C
+                        ALLOCATION DYNAMIQUE EN C
  ============================================================================
- 
- 1. QU'EST-CE QUE C'EST ?
-    Jusqu'à présent, la mémoire de vos variables et tableaux était allouée 
-    de manière STATIQUE sur la "Pile" (Stack). Sa taille devait être connue 
-    dès la compilation (ex: int tab[100];).
-    
-    L'allocation dynamique permet de demander au système d'exploitation de la 
-    mémoire sur le "Tas" (Heap) PENDANT l'exécution du programme, selon les 
-    besoins réels (ex: un tableau dont la taille est choisie par l'utilisateur).
-    (voir allocdyn.md pour plus de détails)
+L'allocation dynamique permet de réserver de la mémoire à l'exécution, 
+contrairement à l'allocation statique qui se fait à la compilation.
+Elle est particulièrement utile lorsque la taille des données n'est pas connue 
+à l'avance ou peut varier.
 
- 2. LES FONCTIONS ESSENTIELLES (<stdlib.h>) :
-    - malloc(taille_en_octets) : 
-        RÉSERVE un bloc de mémoire non initialisé. Renvoie un pointeur vers 
-        le premier octet, ou NULL en cas d'échec (mémoire saturée).
-    - calloc(nombre, taille_unitaire) : 
-        RÉSERVE de la mémoire et la REMPLIT DE ZÉROS.
-    - realloc(pointeur, nouvelle_taille) : 
-        REDIMENSIONNE un bloc déjà alloué (agrandit ou rétrécit).
-    - free(pointeur) : 
-        LIBÈRE la mémoire allouée. C'est OBLIGATOIRE pour éviter les 
-        fuites de mémoire (memory leaks).
-
- 3. LA RÈGLE D'OR :
-    "Tout malloc/calloc doit avoir son free !"
-    Une fois la mémoire libérée avec free(), le pointeur ne doit plus 
-    être utilisé (mettez-le à NULL par sécurité).
- ============================================================================
+Lorsqu'on déclare un tableau de la sorte : `int tableau[10];`, la taille est fixe 
+et connue à la compilation (impossible de modifier la taille à l'exécution). 
+En revanche, avec l'allocation dynamique, on peut demander à l'utilisateur 
+combien d'éléments il souhaite stocker, et allouer la mémoire en conséquence.
+Car il est parfois impossible de savoir à l'avance combien d'éléments seront 
+nécessaires, surtout dans des programmes interactifs ou des applications 
+qui traitent des données externes.
 */
 
 #include <stdio.h>
@@ -37,7 +21,7 @@
 
 int main(void) {
     // ----------------------------------------------------
-    // 1. ALLOCATION AVEC malloc()
+    // ALLOCATION AVEC malloc()
     // ----------------------------------------------------
     printf("=== 1. ALLOCATION D'UN TABLEAU DYNAMIQUE (malloc) ===\n");
 
@@ -74,7 +58,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 2. REDIMENSIONNEMENT AVEC realloc()
+    // REDIMENSIONNEMENT AVEC realloc()
     // ----------------------------------------------------
     printf("\n=== 2. REDIMENSIONNEMENT (realloc) ===\n");
 
@@ -102,7 +86,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 3. LIBÉRATION DE LA MÉMOIRE (free)
+    // LIBÉRATION DE LA MÉMOIRE (free)
     // ----------------------------------------------------
     printf("\n=== 3. LIBERATION DE LA MEMOIRE (free) ===\n");
 

@@ -1,4 +1,0 @@
-- **Règle d'or du premier indice** : En C, le premier élément est toujours à l'indice 0. Pour un tableau de taille $N$, le dernier élément valide est à l'indice $N-1$ 
-- **Mémoire et risques** : Le langage C ne vérifie pas les dépassements de mémoire (out-of-bounds). Si tu tentes d'accéder à notes[5] dans un tableau de taille 5, tu liras ou écraseras une zone mémoire arbitraire (comportement indéterminé).
-- **Passage aux fonctions** : Un tableau passé en paramètre perd sa notion de taille interne. Tu dois impérativement transmettre la taille du tableau en tant que second paramètre pour pouvoir le parcourir proprement dans la fonction.
-- **Initialisation rapide** : `int tab[10] = {0}`; permet d'initialiser immédiatement l'ensemble des 10 éléments à 0.

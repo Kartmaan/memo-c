@@ -18,7 +18,7 @@ d'assigner des valeurs spécifiques à certains éléments.
 */
 
 // ----------------------------------------------------
-// 1. DÉCLARATION ET UTILISATION DE typedef
+// DÉCLARATION ET UTILISATION DE typedef
 // ----------------------------------------------------
 
 // Sans typedef : il faudrait écrire "enum Jour" à chaque fois.
@@ -42,7 +42,7 @@ typedef enum {
 } CodeReponse;
 
 // ----------------------------------------------------
-// 2. UTILISATION AVEC UNE STRUCTURE ET UN SWITCH
+// UTILISATION AVEC UNE STRUCTURE ET UN SWITCH
 // ----------------------------------------------------
 
 typedef enum {
@@ -53,7 +53,7 @@ typedef enum {
 
 int main(void) {
     // ----------------------------------------------------
-    // 3. INITIALISATION ET AFFECTATION
+    // INITIALISATION ET AFFECTATION
     // ----------------------------------------------------
     printf("=== 1. UTILISATION SIMPLE ===\n");
 
@@ -70,7 +70,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 4. L'ÉNUMÉRATION DANS UN SWITCH (Cas d'usage principal)
+    // L'ÉNUMÉRATION DANS UN SWITCH (Cas d'usage principal)
     // ----------------------------------------------------
     printf("=== 2. ÉTAT D'UN JEU (SWITCH) ===\n");
 
@@ -89,7 +89,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 5. ÉNUMÉRATION AVEC VALEURS PERSONNALISÉES
+    // ÉNUMÉRATION AVEC VALEURS PERSONNALISÉES
     // ----------------------------------------------------
     printf("\n=== 3. CODES ERREURS ===\n");
 

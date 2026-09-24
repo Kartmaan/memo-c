@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// ----------------------------------------------------
-// 1. UTILITÉ N°1 : MODIFIER UNE VARIABLE DEPUIS UNE FONCTION
-// ----------------------------------------------------
-// Sans pointeur (passage par valeur), 'nombre' serait copié et la
-// variable d'origine ne changerait pas dans le main.
-// Avec un pointeur 'int *ptr', on reçoit l'ADRESSE MÉMOIRE de la variable.
+/*  
+ ============================================================================
+                            POINTEURS EN C
+ ============================================================================
+Un pointeur est une variable qui contient l'ADRESSE MÉMOIRE d'une autre variable.
+C'est une manière de manipuler les données en C, en permettant d'accéder directement
+à leur emplacement en mémoire.
+*/
+
+// En C les variables passées en paramètre à une fonction sont copiées (passage par valeur).
+// La valeur copiée sera manipulée dans la fonction, mais la variable originale restera inchangée.
+// Pour modifier la valeur d'une variable dans une fonction, il faut passer son adresse
+// (passage par adresse) et utiliser un pointeur pour accéder à cette valeur.
 void doubler_valeur(int *ptr) {
     // L'opérateur '*' (déréférencement) permet d'accéder à la VALEUR
     // située à l'adresse stockée dans 'ptr'.
@@ -15,7 +22,7 @@ void doubler_valeur(int *ptr) {
 
 int main(void) {
     // ----------------------------------------------------
-    // 2. DÉCLARATION, ADRESSE (&) ET DÉRÉFÉRENCEMENT (*)
+    // DÉCLARATION, ADRESSE (&) ET DÉRÉFÉRENCEMENT (*)
     // ----------------------------------------------------
     printf("=== 1. BASES : VARIABLE VS POINTEUR ===\n");
 
@@ -37,7 +44,7 @@ int main(void) {
 
 
     // ----------------------------------------------------
-    // 3. UTILITÉ N°1 EN PRATIQUE : MODIFICATION EN FONCTION
+    // UTILITÉ N°1 EN PRATIQUE : MODIFICATION EN FONCTION
     // ----------------------------------------------------
     printf("=== 2. PASSAGE PAR ADRESSE EN FONCTION ===\n");
 
@@ -51,7 +58,7 @@ int main(void) {
 
 
     // ----------------------------------------------------
-    // 4. ARITHMÉTIQUE DES POINTEURS ET TABLEAUX
+    // ARITHMÉTIQUE DES POINTEURS ET TABLEAUX
     // ----------------------------------------------------
     // En C, le nom d'un tableau est EN RÉALITÉ un pointeur vers son 1er élément.
     printf("=== 3. POINTEURS ET TABLEAUX ===\n");
@@ -61,7 +68,7 @@ int main(void) {
 
     // Accès classique vs Accès par arithmétique de pointeurs
     printf("Premier element (notes[0])     : %d\n", notes[0]);
-    printf("Premier element (*p_notes)     : %d\n", *p_notes);
+    printf("Premier element (*p_notes)     : %d\n", *p_notes); // Même chose que notes[0]
 
     // L'addition '+ 1' décale le pointeur vers la case mémoire suivante 
     // (le compilateur calcule automatiquement la taille d'un int en octets)
@@ -70,7 +77,7 @@ int main(void) {
 
 
     // ----------------------------------------------------
-    // 5. BONNES PRATIQUES : LE POINTEUR NULL
+    // BONNES PRATIQUES : LE POINTEUR NULL
     // ----------------------------------------------------
     printf("=== 4. SECURITE : POINTEUR NULL ===\n");
 

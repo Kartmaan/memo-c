@@ -1,8 +1,25 @@
 #include <stdio.h>
 
+/*  
+ ============================================================================
+                        SPÉCIFICATEURS DE FORMAT EN C
+ ============================================================================
+Les spécificateurs de format sont utilisés dans les fonctions d'entrée/sortie 
+(comme printf et scanf) pour indiquer le type de données à traiter.
+
+Exemples de spécificateurs de format :
+- %d : entier signé (int)
+- %u : entier non signé (unsigned int)
+- %f : nombre à virgule flottante (float)
+- %lf : nombre à virgule flottante double précision (double)
+- %c : caractère unique (char)
+- %s : chaîne de caractères (char[])
+- %p : adresse mémoire (void*)
+*/
+
 int main(void) {
     // ----------------------------------------------------
-    // 1. LES SPÉCIFICATEURS DE TYPE
+    // LES SPÉCIFICATEURS DE TYPE
     // ----------------------------------------------------
     int entier = -42;
     unsigned int entier_positif = 42000;
@@ -21,7 +38,7 @@ int main(void) {
     printf("%%p  (adresse mémoire)   : %p\n\n", (void*)&entier);
 
     // ----------------------------------------------------
-    // 2. LA DIFFÉRENCE ENTRE %d ET %i
+    // LA DIFFÉRENCE ENTRE %d ET %i
     // ----------------------------------------------------
     // En sortie avec printf(), %d et %i font exactement la même chose.
     // La différence majeure réside lors de la saisie avec scanf() !
@@ -40,7 +57,7 @@ int main(void) {
 
 
     // ----------------------------------------------------
-    // 3. CONTRÔLE DE LA PRÉCISION ET DE LA LARGEUR
+    // CONTRÔLE DE LA PRÉCISION ET DE LA LARGEUR
     // ----------------------------------------------------
     printf("\n=== 3. PRÉCISION ET ALIGNEMENT ===\n");
     
@@ -55,7 +72,7 @@ int main(void) {
     printf("Remplissage avec des zéros (0N)         : [%08d]\n\n", 42);
 
     // ----------------------------------------------------
-    // 4. BASES NUMÉRIQUES (HEXADÉCIMAL ET OCTAL)
+    // BASES NUMÉRIQUES (HEXADÉCIMAL ET OCTAL)
     // ----------------------------------------------------
     int valeur = 255;
 

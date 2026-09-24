@@ -1,12 +1,23 @@
 #include <stdio.h>
 
+/*  
+ ============================================================================
+                            BOUCLES EN C
+ ============================================================================
+Les boucles en C permettent de répéter un bloc de code plusieurs fois.
+Il existe trois types de boucles principales : for, while et do-while.
+*/
+
 int main(void) {
     // ----------------------------------------------------
-    // 1. LA BOUCLE FOR (Répétition avec compteur connu)
+    // LA BOUCLE FOR (Répétition avec compteur connu)
     // ----------------------------------------------------
     // Syntaxe : for (initialisation; condition; incrémentation)
     printf("=== 1. BOUCLE FOR ===\n");
 
+    // Tant que i est inférieur ou égal à 5, on répète le bloc de code.
+    // i démarre à 1 et est incrémenté de 1 à chaque tour.
+    // i n'a pas besoin d'être déclaré en dehors de la boucle, il est local à la boucle.
     for (int i = 1; i <= 5; i++) {
         printf("Tour n°%d\n", i);
     }
@@ -19,7 +30,7 @@ int main(void) {
     printf("Décollage !\n");
 
     // ----------------------------------------------------
-    // 2. LA BOUCLE WHILE (Répétition sous condition)
+    // LA BOUCLE WHILE (Répétition sous condition)
     // ----------------------------------------------------
     // Évalue la condition AVANT chaque exécution.
     printf("\n=== 2. BOUCLE WHILE ===\n");
@@ -31,7 +42,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 3. LA BOUCLE DO-WHILE (Exécution au moins UNE fois)
+    // LA BOUCLE DO-WHILE (Exécution au moins UNE fois)
     // ----------------------------------------------------
     // Évalue la condition APRÈS la première exécution.
     // Très utile pour valider une saisie utilisateur.
@@ -48,7 +59,7 @@ int main(void) {
     printf("Code correct !\n");
 
     // ----------------------------------------------------
-    // 4. INSTRUCTIONS DE CONTRÔLE (break et continue)
+    // INSTRUCTIONS DE CONTRÔLE (break et continue)
     // ----------------------------------------------------
     printf("\n=== 4. BREAK ET CONTINUE ===\n");
 

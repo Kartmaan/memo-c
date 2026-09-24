@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*  
+ ============================================================================
+                        MANIPULATION DES FICHIERS EN C
+ ============================================================================
+C permet de manipuler des fichiers en utilisant des fonctions standard de la bibliothèque C.
+Les fichiers peuvent être ouverts en différents modes :
+- "r" : lecture seule (le fichier doit exister)
+- "w" : écriture seule (crée le fichier s'il n'existe pas, écrase le contenu s'il existe)
+- "a" : ajout (append) à la fin du fichier (crée le fichier s'il n'existe pas)
+- "r+" : lecture et écriture (le fichier doit exister)
+- "w+" : lecture et écriture (crée le fichier s'il n'existe pas, écrase le contenu s'il existe)
+*/
+
 int main(void) {
     const char *nom_fichier = "mon_fichier.txt";
 

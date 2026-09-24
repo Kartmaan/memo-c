@@ -16,7 +16,7 @@ comme une seule entité, plutôt que de gérer chaque variable séparément.
 */
 
 // ----------------------------------------------------
-// 1. DÉCLARATION D'UNE STRUCTURE ET UTILISATION DE typedef
+// DÉCLARATION D'UNE STRUCTURE ET UTILISATION DE typedef
 // ----------------------------------------------------
 
 // Sans typedef : il faudrait écrire "struct Etudiant" à chaque déclaration de variable.
@@ -28,7 +28,7 @@ typedef struct {
 } Etudiant;
 
 // ----------------------------------------------------
-// 2. PROTOTYPES DE FONCTIONS
+// PROTOTYPES DE FONCTIONS
 // ----------------------------------------------------
 // Passage par valeur (lecture seule)
 void afficher_etudiant(Etudiant e);
@@ -38,7 +38,7 @@ void anniversaire(Etudiant *e);
 
 int main(void) {
     // ----------------------------------------------------
-    // 3. INITIALISATION D'UNE STRUCTURE
+    // INITIALISATION D'UNE STRUCTURE
     // ----------------------------------------------------
     printf("=== 1. INITIALISATION ET ACCÈS (Opérateur .) ===\n");
 
@@ -57,7 +57,7 @@ int main(void) {
     afficher_etudiant(e2);
 
     // ----------------------------------------------------
-    // 4. POINTEUR SUR STRUCTURE ET OPÉRATEUR FLÈCHE (->)
+    // POINTEUR SUR STRUCTURE ET OPÉRATEUR FLÈCHE (->)
     // ----------------------------------------------------
     printf("\n=== 2. MODIFICATION VIA POINTEUR (Opérateur ->) ===\n");
 
@@ -69,7 +69,7 @@ int main(void) {
     printf("Age de %s après anniversaire : %d ans\n", e1.nom, e1.age);
 
     // ----------------------------------------------------
-    // 5. TABLEAU DE STRUCTURES
+    // TABLEAU DE STRUCTURES
     // ----------------------------------------------------
     printf("\n=== 3. TABLEAU DE STRUCTURES ===\n");
 

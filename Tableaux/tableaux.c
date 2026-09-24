@@ -1,13 +1,22 @@
-// Un tableau est une structure de données qui permet de stocker plusieurs valeurs du même type sous un même nom.
-
 #include <stdio.h>
+
+/*  
+ ============================================================================
+                            TABLEAUX EN C
+ ============================================================================
+Les tableaux sont des structures de données qui permettent de stocker plusieurs 
+valeurs du même type sous un même nom. 
+Ils sont définis par un type (int, float, char, etc.) et une taille fixe. 
+Le type détermine la nature des données que le tableau peut contenir et la quantité 
+de mémoire allouée pour chaque élément.
+*/
 
 // Prototype de fonction : un tableau passé en paramètre nécessite sa taille
 void afficher_tableau(int tab[], int taille);
 
 int main(void) {
     // ----------------------------------------------------
-    // 1. TABLEAU À UNE DIMENSION
+    // TABLEAU À UNE DIMENSION
     // ----------------------------------------------------
     printf("=== 1. TABLEAU À UNE DIMENSION ===\n");
 
@@ -24,7 +33,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 2. CALCUL D'UNE MOYENNE (Cas d'usage classique)
+    // CALCUL D'UNE MOYENNE (Cas d'usage classique)
     // ----------------------------------------------------
     printf("\n=== 2. CALCUL SUR UN TABLEAU ===\n");
 
@@ -36,7 +45,7 @@ int main(void) {
     printf("Moyenne de la classe : %.2f\n", moyenne);
 
     // ----------------------------------------------------
-    // 3. TABLEAU À DEUX DIMENSIONS (MATRICE)
+    // TABLEAU À DEUX DIMENSIONS (MATRICE)
     // ----------------------------------------------------
     printf("\n=== 3. MATRICE (2D) ===\n");
 
@@ -55,7 +64,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 4. PASSAGE D'UN TABLEAU À UNE FONCTION
+    // PASSAGE D'UN TABLEAU À UNE FONCTION
     // ----------------------------------------------------
     printf("\n=== 4. AFFICHAGE VIA UNE FONCTION ===\n");
     afficher_tableau(notes, 5);

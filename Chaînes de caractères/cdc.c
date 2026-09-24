@@ -1,9 +1,22 @@
 #include <stdio.h>
 #include <string.h> // Nécessaire pour strlen, strcpy, strcat, strcmp, etc.
 
+/*  
+ ============================================================================
+                        CHAÎNES DE CARACTÈRES EN C
+ ============================================================================
+Les chaînes de caractères en C sont représentées par des tableaux de caractères 
+(char) se terminant par un caractère nul '\0' (automatiquement ajouté par le compilateur).
+
+Exemple : char str[] = "Bonjour"; // Le compilateur réserve 8 octets
+Le caractère nul '\0' est essentiel car il indique la fin de la chaîne en mémoire.
+Les fonctions de manipulation de chaînes (strlen, strcpy, strcat, strcmp, etc.) 
+utilisent ce caractère pour déterminer où s'arrête la chaîne.
+*/
+
 int main(void) {
     // ----------------------------------------------------
-    // 1. DÉCLARATION ET CARACTÈRE DE FIN DE CHAÎNE (\0)
+    // DÉCLARATION ET CARACTÈRE DE FIN DE CHAÎNE (\0)
     // ----------------------------------------------------
     printf("=== 1. BASES DES CHAÎNES DE CARACTÈRES ===\n");
 
@@ -16,7 +29,7 @@ int main(void) {
     printf("Chaine 2 : %s\n\n", ch2);
 
     // ----------------------------------------------------
-    // 2. LONGUEUR D'UNE CHAÎNE : strlen()
+    // LONGUEUR D'UNE CHAÎNE : strlen()
     // ----------------------------------------------------
     printf("=== 2. LONGUEUR (strlen) ===\n");
 
@@ -27,7 +40,7 @@ int main(void) {
     printf("La taille allouee en memoire (sizeof) est de %zu octets.\n\n", sizeof(ch1));
 
     // ----------------------------------------------------
-    // 3. COPIE DE CHAÎNE : strcpy() ET strncpy()
+    // COPIE DE CHAÎNE : strcpy() ET strncpy()
     // ----------------------------------------------------
     printf("=== 3. COPIE (strcpy / strncpy) ===\n");
 
@@ -46,7 +59,7 @@ int main(void) {
     printf("Apres strncpy() tronque : %s\n\n", destination_securisee);
 
     // ----------------------------------------------------
-    // 4. CONCATÉNATION (FUSION) : strcat()
+    // CONCATÉNATION (FUSION) : strcat()
     // ----------------------------------------------------
     printf("=== 4. CONCATÉNATION (strcat) ===\n");
 
@@ -55,7 +68,7 @@ int main(void) {
     printf("Apres strcat() : %s\n\n", salutation);
 
     // ----------------------------------------------------
-    // 5. COMPARAISON DE CHAÎNES : strcmp()
+    // COMPARAISON DE CHAÎNES : strcmp()
     // ----------------------------------------------------
     printf("=== 5. COMPARAISON (strcmp) ===\n");
 
