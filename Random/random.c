@@ -32,9 +32,21 @@ double generer_double_0_1(void) {
     return (double)rand() / RAND_MAX;
 }
 
+// Génère un entier grand format entre 0 et un max donné (ex: 100 000)
+// Par défaut, rand() ne peut générer que des nombres jusqu'à RAND_MAX (au moins 32767).
+// Pour dépasser cette limite, on combine plusieurs appels à rand().
+int grand_rand(int max_exclus) {
+    // 1. On combine deux appels à rand() pour dépasser la limite de 32 767
+    //    (RAND_MAX + 1 vaut généralement 32768)
+    long grand_nombre = (long)rand() * (RAND_MAX + 1) + rand();
+
+    // 2. On ramène le résultat dans la plage [0, max_exclus - 1]
+    return (int)(grand_nombre % max_exclus);
+}
+
 int main(void) {
     // ----------------------------------------------------
-    // 1. INITIALISATION DE LA GRAINE (srand)
+    // INITIALISATION DE LA GRAINE (srand)
     // ----------------------------------------------------
     // 'srand' définit le point de départ de la suite pseudo-aléatoire.
     // time(NULL) renvoie le nombre de secondes écoulées depuis le 1er janvier 1970.
@@ -43,10 +55,12 @@ int main(void) {
 
     printf("=== 1. CONSTANTE RAND_MAX ===\n");
     // RAND_MAX est la valeur maximale que rand() peut renvoyer (au moins 32767)
+    // Pour augmenter la plage de valeurs de rand(), on peut combiner plusieurs 
+    // appels à rand() ou utiliser des bibliothèques plus avancées.
     printf("Valeur maximale renvoyee par rand() : %d\n\n", RAND_MAX);
 
     // ----------------------------------------------------
-    // 2. TIRAGE BRUT AVEC rand()
+    // TIRAGE BRUT AVEC rand()
     // ----------------------------------------------------
     printf("=== 2. TIRAGE BRUT (0 a RAND_MAX) ===\n");
     for (int i = 0; i < 3; i++) {
@@ -54,7 +68,7 @@ int main(void) {
     }
 
     // ----------------------------------------------------
-    // 3. TIRAGE DANS UN INTERVALLE INT [min, max]
+    // TIRAGE DANS UN INTERVALLE INT [min, max]
     // ----------------------------------------------------
     printf("\n=== 3. ENTIERS DANS UN INTERVALLE ===\n");
     
@@ -74,7 +88,7 @@ int main(void) {
     printf("\n\n");
 
     // ----------------------------------------------------
-    // 4. TIRAGE DE NOMBRE À VIRGULE (FLOTTANTS)
+    // TIRAGE DE NOMBRE À VIRGULE (FLOTTANTS)
     // ----------------------------------------------------
     printf("=== 4. FLOTTANTS (double) ===\n");
 
